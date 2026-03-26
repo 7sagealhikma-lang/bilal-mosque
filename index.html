@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>ቢላል መስጂድ - Bilal Mosque | Spiritual Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #0f5b3a;
+            --deep-green: #0a3e28;
+            --light-green: #2c8c5a;
+            --gold: #e4b832;
+            --gold-light: #f5cf6b;
+            --white: #ffffff;
+            --cream: #fef8e7;
+            --text-dark: #1f2f2c;
+            --shadow: 0 15px 35px rgba(0,0,0,0.2);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.25);
+            --transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+        }
+
+        
+
+        /* Animated Background Slider */
+        .bg-slider {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            overflow: hidden;
+        }
+
+        .bg-slider .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+            filter: brightness(0.45);
+        }
+
+        .bg-slider .slide.active {
+            opacity: 1;
+        }
+
+        /* Header Stunning */
+        header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden; /* Important: clips the video to header bounds */
+    display: flex;
+    align-items: space-between;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(228, 184, 50, 0.3);
+    
+        }
+
+        .header-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%); /* Centers the video */
+    z-index: -1; /* Puts it behind the content */
+    object-fit: contain;
+}
+        .header-container {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;               /* Ensures it spans the whole screen */
+    max-width: 1400px;         /* Keeps content from getting too wide on huge monitors */
+    margin: 0 auto;            /* Centers the container itself */
+    padding: 0 1rem;  
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            
+            padding: 0.3rem 1rem 0.3rem 0.5rem;
+            border-radius: 100px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(228,184,50,0.4);
+        }
+
+        .logo-circle {
+            width: 80px;
+            height: 80px;
+            background-image: url('blog.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.3), 0 5px 15px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        .logo-circle2 {
+            width:120px;
+            height: 120px;
+            background-image: url('flag.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: cover;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.3), 0 5px 15px rgba(0,0,0,0.2);
+            transition: var(--transition);
+
+        }
+        .logo-circle3 {
+            width:100px;
+            height: 100px;
+            background-image: url('flag.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            display: cover;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 0 0 3px rgba(255,255,255,0.3), 0 5px 15px rgba(0,0,0,0.2);
+            transition: var(--transition);
+            margin:  0.09rem 2rem 0.09rem 8rem;
+        }
+        .logo-circle img {
+            width: 70px;
+            height: 70px;
+            border-radius: 5%;
+            object-fit: cover;
+        }
+         .logo-circle2 img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+         .logo-circle3 img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+        }
+        .logo-font {
+            display: flex;
+            align-items:column;
+            gap: 12px;
+        }
+
+        .logo h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.731);
+            letter-spacing: 1px;
+        }
+        .logo h2 {
+            font-size: 0.5rem;
+            font-weight: 100;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+
+
+        /* Navigation Stunning */
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--white);
+            font-weight: 600;
+            padding: 0.6rem 1.2rem;
+            border-radius: 40px;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.08);
+            
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(228,184,50,0.2);
+        }
+
+        .nav-links a i {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover {
+            background: var(--gold);
+            color: var(--deep-green);
+            transform: translateY(-3px);
+            border-color: transparent;
+            box-shadow: 0 8px 20px rgba(228,184,50,0.4);
+        }
+
+        .nav-links a:hover i {
+            color: var(--deep-green);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: var(--gold);
+            border: none;
+            font-size: 1.8rem;
+            color: var(--deep-green);
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        /* Hero Section with Ayah Transition */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 7rem 1.5rem 4rem;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(12px);
+            padding: 2.5rem;
+            border-radius: 60px;
+            border: 1px solid rgba(228,184,50,0.6);
+            animation: fadeSlideUp 1s ease-out;
+        }
+
+        .ayah-container {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
+            transition: opacity 0.8s ease;
+            line-height: 1.5;
+        }
+
+        .surah-ref {
+            color: var(--cream);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .date-display {
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(8px);
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            display: inline-block;
+            font-weight: 600;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+        }
+
+        /* Prayer Times */
+        .prayer-times {
+            background: var(--white);
+            margin: -2rem 1.5rem 2rem;
+            border-radius: 40px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 5;
+        }
+
+        .prayer-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1rem;
+        }
+
+        .prayer-card {
+            background: linear-gradient(135deg, var(--cream), #fff);
+            padding: 1.2rem;
+            border-radius: 28px;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 1px solid rgba(228,184,50,0.3);
+        }
+
+        .prayer-card.active {
+            background: linear-gradient(135deg, var(--primary-green), var(--light-green));
+            color: white;
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(15,91,58,0.4);
+            border-color: var(--gold);
+        }
+
+        .prayer-name {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .prayer-time {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-top: 6px;
+        }
+
+        .next-prayer-indicator {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--deep-green);
+            font-weight: bold;
+            border-radius: 60px;
+            padding: 1rem;
+            margin-top: 1.5rem;
+            text-align: center;
+        }
+
+        /* Cards and sections */
+        .content-section {
+            padding: 2rem 1.5rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }.content-section2 {
+            padding: 2rem 1.5rem;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(5px);
+            border-radius: 40px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(228,184,50,0.3);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.7rem;
+            padding: 0.9rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #25d366, #128c7e);
+            color: white;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--deep-green);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 28px;
+            border-left: 6px solid var(--gold);
+            transition: var(--transition);
+        }
+
+        /* Footer */
+        footer {
+            background-image: url('fback2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .social-links a {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0.6rem;
+            color: var(--gold);
+            font-size: 1.4rem;
+            transition: var(--transition);
+            border: 1px solid var(--gold);
+        }
+
+        .social-links a:hover {
+            background: var(--gold);
+            color: var(--deep-green);
+            transform: translateY(-5px);
+        }
+
+        .gps-link {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .yusuf-btn {
+    display: inline-block;
+    padding: 2px 2px;
+    background-image: url('me.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+    color: var(--deep-green) !important; /* Dark green text for contrast */
+    text-decoration: none;
+    border-radius: 1px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid transparent;
+    margin: 0 5px;
+    font-size: 1.9rem;
+}
+
+.yusuf-btn:hover {
+    background-image: url('me.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+    color: var(--gold) !important;
+    border: 1px solid var(--gold);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(244, 244, 243, 0.911)
+}
+
+.community-info {
+    padding: 5rem 2rem;
+    background-color: var(--cream);
+    background: var(--white);
+            margin: -2rem 1.5rem 2rem;
+            border-radius: 40px;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            z-index: 5;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Form is slightly wider than the update column */
+    gap: 4rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+}
+
+/* Left Column Styling */
+.registration-column h2 { color: var(--primary-green); margin-bottom: 0.5rem; }
+.sub-label { color: var(--gold-light); margin-bottom: 2rem; font-weight: 600; }
+
+#membershipForm input, #membershipForm textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 1.2rem;
+    border: 1px solid rgba(15, 91, 58, 0.2);
+    border-radius: 12px;
+    background: #fff;
+    font-family: inherit;
+}
+
+/* Right Column (Stacked) Styling */
+.updates-column {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.qr-container {
+    text-align: center;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--gold);
+}
+
+.qr-box {
+    width: 140px;
+    height: 140px;
+    border: 2px dashed var(--gold);
+    margin: 0 auto 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jannazah-card {
+    background: var(--deep-green);
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    border-left: 5px solid var(--gold); /* Adds a decorative gold edge */
+    text-align: center;
+}
+
+.jannazah-header i { font-size: 2rem; color: var(--gold); margin-bottom: 1rem; }
+.status-empty { font-style: italic; opacity: 0.8; margin-top: 1rem; }
+/* Container for QR and Bank details */
+.donation-row {
+    display: flex;
+    gap: 1.5rem;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--gold);
+    box-shadow: var(--shadow);
+}
+
+.qr-container {
+    background-image: url('shop2shop.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+    flex: 0 0 160px; /* Keeps QR box a fixed size */
+    text-align: center;
+    border-right: 1px solid #eee;
+    padding-right: 1.5rem;
+}
+
+.banking-details {
+    flex: 1;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+.banking-details h3 {
+    color: var(--primary-green);
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    border-bottom: 2px solid var(--gold);
+    display: inline-block;
+}
+
+.banking-details p {
+    margin-bottom: 0.4rem;
+    line-height: 1.4;
+}
+
+.meter-info {
+    margin-top: 1rem;
+    padding: 8px;
+    background: #fff9e6; /* Light gold tint */
+    border-radius: 8px;
+    border-left: 4px solid var(--gold);
+}
+
+.meter-info i { color: #f39c12; }
+
+/* Adjusting the Janazah Card to stay below */
+.jannazah-card {
+    margin-top: 1rem;
+}
+.ad-card {
+    background: #ffffff;
+    border: 1px solid var(--gold);
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    transition: var(--transition);
+    box-shadow: var(--shadow);
+}
+
+.ad-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.ad-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--primary-green);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.ad-icon {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.ad-card h3 {
+    color: var(--deep-green);
+    margin-bottom: 0.5rem;
+}
+
+.ad-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.ad-btn {
+    display: block;
+    background: var(--gold);
+    color: var(--deep-green);
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.ad-btn:hover {
+    background: var(--primary-green);
+    color: white;
+}
+.services {
+    padding: 0.8rem 2rem;
+    color: white;
+    text-align: center;
+}
+.services-grid {
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.service-card {
+    background: black;
+    border: 1px solid var(--gold);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.service-card i {
+    color: var(--primary-green);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+
+/* Responsive Fix for small screens */
+@media (max-width: 600px) {
+    .donation-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .qr-container {
+
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding-right: 0;
+        padding-bottom: 1rem;
+        width: 100%;
+    }
+}
+
+
+/* Responsive */
+@media (max-width: 900px) {
+    .info-grid { grid-template-columns: 1fr; }
+}
+
+.qr-box {
+    width: 150px;
+    height: 150px;
+    border: 2px dashed var(--gold);
+    margin: 1.5rem auto 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+    .info-grid { grid-template-columns: 1fr; }
+}
+
+
+
+        @media (max-width: 1024px) {
+            .prayer-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+            nav {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 320px;
+                height: 100vh;
+                background: var(--deep-green);
+                z-index: 1100;
+                transition: 0.3s;
+                padding: 2rem;
+                flex-direction: column;
+            }
+            nav.active {
+                right: 0;
+            }
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+                margin-top: 3rem;
+            }
+            .nav-links a {
+                background: rgba(255,255,255,0.1);
+            }
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.7);
+                z-index: 1050;
+                opacity: 0;
+                visibility: hidden;
+                transition: 0.3s;
+            }
+            .overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+            .prayer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero-content {
+                padding: 1.5rem;
+            }
+            .ayah-container {
+                font-size: 1.2rem;
+            }
+            .logo h1 {
+                font-size: 1.1rem;
+            }
+            .logo-circle {
+                width: 48px;
+                height: 48px;
+            }
+        }
+
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Update your existing grid-item background classes */
+.history-bg { 
+    background-image: url('link.jpg'); 
+    background-color: #5d4037; /* Warm wood/earth tone for history */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.academy-bg { 
+    background-image: url('links.jpg'); 
+    background-color: #2e7d32; /* Rich academy green */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Ensure images cover the tiles properly */
+.grid-item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    overflow: hidden;
+    border: 2px solid var(--gold);
+    transition: var(--transition);
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Dynamic Background Slider -->
+<div class="bg-slider" id="bgSlider">
+    <div class="slide active" style="background-image: url('m9.jpg');"></div>
+    <!-- Add more images from your folder: ensure these files exist or replace with actual paths 
+    <div class="slide" style="background-image: url('a2.jpg');"></div>
+    <div class="slide" style="background-image: url('a3.jpg');"></div>
+    <div class="slide" style="background-image: url('a4.jpg');"></div>-->
+</div>
+
+<header>
+    <div class="header-container">
+        <video autoplay muted loop playsinline class="header-video">
+        <source src="bhead9.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+         </video>
+        <div class="logo">
+            <div class="logo-circle">
+                <img src="assets/images/looogo.png" alt="Logo" onerror="this.src='https://via.placeholder.com/48?text=B'">
+            </div>
+            <h1>ቢላል ሙስሊም ኮሚኒቲ<br>Bilal Muslim Community</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle"><i class="fas fa-bars"></i></button>
+        <nav id="mainNav">
+            <ul class="nav-links">
+                <li><a href="#home"><i class="fas fa-home"></i> ዋና</a></li>
+                <li><a href="#madrasa"><i class="fas fa-book"></i> ቁርአን ያዳምጡ</a></li>
+                <li><a href="#leadership"><i class="fas fa-user-tie"></i> መረጃ እና አድራሻ </a></li>
+                <li><a href="#donate"><i class="fas fa-hand-holding-heart"></i>መድረሳ</a></li>
+                <li><a href="#announcements"><i class="fas fa-bullhorn"></i> አባልነት መመዝገቢያ </a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<div class="overlay" id="overlay"></div>
+
+<main>
+    <!-- Hero with Ayah Transition -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="ayah-container" id="ayahText">يَٰبَنِيٓ ءَادَمَ خُذُواْ زِينَتَكُمۡ عِندَ كُلِّ مَسۡجِدٖ</div>
+            <div class="surah-ref" id="surahRef">Surah Al-A'raf (7:31)</div>
+            <div class="date-display" id="islamicDate"><i class="far fa-calendar-alt"></i> <span>29 ረመዳን 1446</span></div>
+        </div>
+    </section>
+
+    <!-- Prayer Times -->
+    <section class="prayer-times">
+        <div class="section-title" style="text-align:center; margin-bottom:1.5rem;">
+            <h3 style="color:var(--primary-green);"><i class="fas fa-clock"></i> የዛሬ የሶላት ወቅቶች</h3>
+        </div>
+        <div class="prayer-grid" id="prayerGrid"></div>
+        <div class="next-prayer-indicator" id="nextPrayer"><i class="fas fa-hourglass-half"></i> <span>ቀጣይ ሶላት በቅርቡ</span></div>
+    </section>
+
+    <!-- Announcements -->
+    <section class="content-section" id="announcements">
+        <div class="ad-card">
+    <div class="ad-badge">አዲስ (New)</div>
+    <div class="ad-icon"><i class="fas fa-book-open"></i></div>
+    <h3>የቁርዓን ትምህርት</h3> <!-- Quran Lessons -->
+    <p>ለህፃናት እና ለታላላቅ የተዘጋጀ የቁርዓን እና የተጅዊድ ትምህርት።</p>
+    <div class="ad-contact">
+        <span><i class="fas fa-phone"></i> 061 774 4192</span>
+    </div>
+    <a href="tel:0617744192" class="ad-btn">አሁኑኑ ይደውሉ</a> <!-- Call Now -->
+</div>
+
+
+    <!-- Madrasa -->
+    <section class="content-section2" id="madrasa">
+        <div class="card">
+            <div style="display:flex; gap:1rem; align-items:center; border-bottom:2px solid var(--gold); padding-bottom:1rem;">
+                <div style="background:var(--primary-green); width:55px; height:55px; border-radius:20px; display:flex; align-items:center; justify-content:center;"><i class="fas fa-book-open fa-2x" style="color:var(--gold);"></i></div>
+                <div><h3 style="color:var(--primary-green);">መድረሳ ፕሮግራም</h3><p>Madrasa Excellence</p></div>
+            </div>
+            <p style="margin:1rem 0;">በቢላል መስጂድ የቁርአን እና እስላማዊ ትምህርት ለሁሉም ዕድሜ ይሰጣል።</p>
+            <div style="background:var(--cream); border-radius:28px; padding:1rem;">
+                <div style="display:flex; justify-content:space-between; padding:0.7rem 0;"><span><i class="fas fa-child"></i> የልጆች ትምህርት</span><span>ሰኞ - ሐሙስ: 4:00-6:00 PM</span></div>
+                <div style="display:flex; justify-content:space-between; padding:0.7rem 0;"><span><i class="fas fa-user-graduate"></i> አዋቂዎች</span><span>ሰኞ & ሐሙስ: 7:00-8:30 PM</span></div>
+                <div style="display:flex; justify-content:space-between; padding:0.7rem 0;"><span><i class="fas fa-star"></i> ቅዳሜ ህፃናት</span><span>9:00 AM - 12:00 PM</span></div>
+            </div>
+            <a href="https://wa.me/27677929291?text=ሰላም፣%20ስለ%20መድረሳ%20ትምህርት%20እፈልጋለሁ" class="btn btn-whatsapp" style="margin-top:1.2rem;"><i class="fab fa-whatsapp"></i> በዋትስአፕ ይቀላቀሉ</a>
+        </div>
+    </section>
+    <section class="community-info">
+    <div class="info-grid">
+        
+        <!-- LEFT SIDE: REGISTRATION FORM -->
+        <div class="registration-column">
+            <h2>መረጃ እና አድራሻ</h2>
+            <p class="sub-label">የቢላል ሙስሊም ማህበረሰብ አባልነት መመዝገቢያ</p>
+            
+            <form id="membershipForm">
+                <input type="text" id="name" placeholder="ሙሉ ስም (Full Name)" required>
+                <input type="tel" id="phone" placeholder="ስልክ ቁጥር (Phone Number)" required>
+                <textarea id="address" placeholder="አድራሻ (Address)" rows="3"></textarea>
+                
+                <button type="button" onclick="sendToWhatsApp()" class="btn-submit">
+                    ተመዝገብ (Submit to WhatsApp)
+                </button>
+            </form>
+        </div>
+
+        <!-- RIGHT SIDE: QR & JANAZAH STACKED -->
+        <div class="updates-column">
+    <!-- Row 1: QR and Bank Details side-by-side -->
+    <div class="donation-row">
+        <!-- QR Code Side -->
+        <div class="qr-container">
+            
+                <!-- Replace with your actual QR image -->
+            
+                <img src="qrshop.jpg" alt="Logo">
+            
+            
+        </div>
+
+        <!-- Banking Details Side -->
+        <div class="banking-details">
+            <h3>የልገሳ መረጃ (Donation & Banking)</h3>
+            <p><strong>Bank:</strong> FNB (First National Bank)</p>
+            <p><strong>Account Name:</strong> Billal Islamic Community Association</p>
+            <p><strong>Account Number:</strong> 63060465193</p>
+            <p><strong>Account Type:</strong> Islamic Gold Business Account</p>
+            <div class="meter-info">
+                <p><i class="fas fa-bolt"></i> <strong>Electric Meter:</strong> 0424778775</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Row 2: Janazah Announcement -->
+    <div class="jannazah-card">
+        <div class="jannazah-header">
+            <div class="logo-circle3">
+                <img src="looogo.png" alt="Logo">
+            </div>
+            <h3>የቀብር ስነስርዓት ማስታወቂያ (Janazah)</h3>
+        </div>
+        <p class="status-empty">በአሁኑ ሰዓት ምንም አይነት ማስታወቂያ የለም።</p>
+    </div>
+</div>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+    <!-- Leadership + GPS location -->
+    <section class="content-section" id="leadership">
+        <div class="card">
+            
+              <div class="profile-section" style="text-align:center; display: flex; flex-direction: column; align-items: center;">
+    
+        
+  
+      <h4 style="color:var(--primary-green); margin-top:1rem;">ቢላል መስጂድ</h4>
+                <p>Alias - Director</p>
+                <a href="https://wa.me/27677929291" class="btn btn-whatsapp" style="width:auto; display:inline-flex; margin:1rem 0;"><i class="fab fa-whatsapp"></i> በዋትስአፕ ያናግሩ</a>
+                <p><i class="fas fa-phone"></i> 067 792 9291</p>
+                
+                <!-- GPS Location Link -->
+                <div style="margin-top:1rem; background:var(--cream); padding:0.8rem; border-radius: 60px;">
+                    <i class="fas fa-map-marker-alt" style="color:var(--gold);"></i> 
+                    <strong>አድራሻ / Address:</strong> 
+                    <a href="https://maps.google.com/?q=32+Teddington+Street,+Bellville+Cape+Town+7530" target="_blank" class="gps-link" style="color:var(--primary-green); text-decoration:underline;">
+                        32 Teddington St, Bellville, Cape Town, 7530, South Africa
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features + Donate -->
+    <section class="content-section" id="features">
+        <section class="services">
+    <h2>አገልግሎቶቻችን (Our Services)</h2>
+    <div class="services-grid">
+        <div class="service-card">
+            <i class="fas fa-pray"></i>
+            <h3>የዕለት ተዕለት ሶላት እና የጁምዓ ኹጥባ </h3>
+            <p>Information on the five daily prayers (Salah) and the Friday sermon (Jumu'ah).</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-book"></i>
+            <h3>የቁርዓን እና ኢስላማዊ ትምህርቶች</h3>
+            <p>Classes for children and adults, including Quranic studies, Tajweed, and Hadith.</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-book"></i>
+            <h3> የኒካህ (የጋብቻ) አገልግሎት</h3>
+            <p>Conducting Islamic marriage ceremonies</p>
+        </div>
+        <div class="service-card">
+            <i class="fas fa-book"></i>
+            <h3>የቀብር ስነስርዓት (Janazah) አገልግሎ</h3>
+            <p>Guidance and support for funeral prayers and burial arrangements.</p>
+        </div>
+        <!-- Add more cards here -->
+    </div>
+</section>
+
+    
+    <section class="spiritual-links">
+        <div style="text-align:center; margin-bottom:1.5rem; color: var(--gold);">
+    
+    <h2 class="section-title">መንፈሳዊ መዝናኛ (Spiritual Resources)</h2> </div>
+    <div class="link-grid">
+        <div class="history-bg">
+        <!-- Tile 1: Quran Central -->
+        <a href="https://qurancentral.com" target="_blank" class="grid-item quran-bg">
+            <div class="overlay">
+                <h3>ሙስሊም ሴንትራል</h3>
+                <p>ትልቁ የእስላማዊ የድምፅ ትምህርቶች መድረክ</p>
+            </div>
+        </a>
+    </div>
+    
+    <div class="academy-bg">
+        <!-- Tile 2: MJC South Africa -->
+        <a href="https://mjc.org.za/" target="_blank" class="grid-item mjc-bg">
+            <div class="overlay">
+                <h3>የደቡብ አፍሪካ መጅሊስ</h3>
+                <p>Muslim Judicial Council (SA)</p>
+            </div>
+        </a>
+    </div>
+    </div>
+    
+</section>
+
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="profile-section" style="text-align:center; display: flex; flex-direction: column; align-items: center;">
+    <div class="logo-circle2">
+        <img src="looogo.png" alt="Logo">
+    </div>
+    <div class="social-links">
+            <a href="https://wa.me/27677929291" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/bilal.mosque.capetown" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.youtube.com/@BilalMosqueCT" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="tel:0677929291"><i class="fas fa-phone"></i></a>
+        </div>
+        <p>&copy; 2026 ቢላል መስጂድ | ሁሉም መብቶች የተጠበቁ ናቸው።</p>
+        
+        <p>Made by 
+            <a href="yusuf.html" class="yusuf-btn">Yusuf</a> 
+            for the love of Ethiopian Muslim Community
+        </p>
+    </div>
+</footer>
+
+<script>
+    // ======================= DYNAMIC BACKGROUND SLIDER =======================
+    const slides = document.querySelectorAll('.bg-slider .slide');
+    let currentSlide = 0;
+    function nextBackground() {
+        slides[currentSlide].classList.remove('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+        slides[currentSlide].classList.add('active');
+    }
+    if(slides.length > 1) setInterval(nextBackground, 7000);
+
+    // ======================= AYAH TRANSITION (Beautiful Quranic Verses) =======================
+    const ayahList = [
+        { text: "يَٰبَنِيٓ ءَادَمَ خُذُواْ زِينَتَكُمۡ عِندَ كُلِّ مَسۡجِدٖ", surah: "Surah Al-A'raf (7:31)" },
+        { text: "إِنَّمَا يَعْمُرُ مَسَاجِدَ اللَّهِ مَنْ آمَنَ بِاللَّهِ وَالْيَوْمِ الْآخِرِ", surah: "Surah At-Tawbah (9:18)" },
+        { text: "وَمَا أُمِرُوا إِلَّا لِيَعْبُدُوا اللَّهَ مُخْلِصِينَ لَهُ الدِّينَ", surah: "Surah Al-Bayyinah (98:5)" },
+        { text: "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً", surah: "Surah Al-Baqarah (2:201)" },
+        { text: "إِنَّ اللَّهَ وَمَلَائِكَتَهُ يُصَلُّونَ عَلَى النَّبِيِّ يَا أَيُّهَا الَّذِينَ آمَنُوا صَلُّوا عَلَيْهِ", surah: "Surah Al-Ahzab (33:56)" }
+    ];
+    let ayahIndex = 0;
+    const ayahElem = document.getElementById('ayahText');
+    const surahElem = document.getElementById('surahRef');
+    function rotateAyah() {
+        ayahElem.style.opacity = '0';
+        setTimeout(() => {
+            ayahIndex = (ayahIndex + 1) % ayahList.length;
+            ayahElem.innerText = ayahList[ayahIndex].text;
+            surahElem.innerText = ayahList[ayahIndex].surah;
+            ayahElem.style.opacity = '1';
+        }, 400);
+    }
+    ayahElem.style.transition = 'opacity 0.6s';
+    setInterval(rotateAyah, 8000);
+
+    // ======================= PRAYER TIMES LOGIC =======================
+    const prayerTimesData = {
+        fajr: { hour: 5, minute: 15, name: 'ፈጅር (Fajr)' },
+        sunrise: { hour: 6, minute: 30, name: 'ሱብህ (Sunrise)' },
+        dhuhr: { hour: 12, minute: 30, name: 'ዙህር (Dhuhr)' },
+        asr: { hour: 15, minute: 45, name: 'ዓስር (Asr)' },
+        maghrib: { hour: 18, minute: 25, name: 'መግሪብ (Maghrib)' },
+        isha: { hour: 19, minute: 45, name: 'ኢሻ (Isha)' }
+    };
+    const prayerKeys = ['fajr', 'sunrise', 'dhuhr', 'asr', 'maghrib', 'isha'];
+    const grid = document.getElementById('prayerGrid');
+    prayerKeys.forEach(key => {
+        const p = prayerTimesData[key];
+        const card = document.createElement('div');
+        card.className = 'prayer-card';
+        card.setAttribute('data-prayer', key);
+        card.innerHTML = `<div class="prayer-name">${p.name}</div><div class="prayer-time">${p.hour.toString().padStart(2,'0')}:${p.minute.toString().padStart(2,'0')}</div>`;
+        grid.appendChild(card);
+    });
+    function updatePrayerStatus() {
+        const now = new Date();
+        const currentMin = now.getHours() * 60 + now.getMinutes();
+        let nextPrayer = null;
+        let smallestDiff = Infinity;
+        for (let key of prayerKeys) {
+            const p = prayerTimesData[key];
+            const prayerMin = p.hour * 60 + p.minute;
+            const diff = prayerMin - currentMin;
+            if (diff > 0 && diff < smallestDiff) {
+                smallestDiff = diff;
+                nextPrayer = { ...p, key };
+            }
+        }
+        if (!nextPrayer) {
+            const fajr = prayerTimesData.fajr;
+            const tomorrowFajr = (24*60) - currentMin + (fajr.hour*60 + fajr.minute);
+            nextPrayer = { ...fajr, key: 'fajr', diff: tomorrowFajr };
+            smallestDiff = tomorrowFajr;
+        } else {
+            nextPrayer.diff = smallestDiff;
+        }
+        document.querySelectorAll('.prayer-card').forEach(card => card.classList.remove('active'));
+        if(nextPrayer) {
+            const activeCard = document.querySelector(`[data-prayer="${nextPrayer.key}"]`);
+            if(activeCard) activeCard.classList.add('active');
+            const hoursLeft = Math.floor(nextPrayer.diff / 60);
+            const minsLeft = nextPrayer.diff % 60;
+            const timeStr = hoursLeft > 0 ? `${hoursLeft} ሰዓት ${minsLeft} ደቂቃ` : `${minsLeft} ደቂቃ`;
+            document.getElementById('nextPrayer').innerHTML = `<i class="fas fa-hourglass-half"></i> <span>ቀጣዩ ሶላት: ${nextPrayer.name} - በ ${timeStr} ውስጥ</span>`;
+        }
+    }
+    updatePrayerStatus();
+    setInterval(updatePrayerStatus, 60000);
+
+    // Islamic Date
+    function updateIslamicDate() {
+        const today = new Date();
+        const formatted = new Intl.DateTimeFormat('en-u-ca-islamic-civil', { day: 'numeric', month: 'long', year: 'numeric' }).format(today);
+        document.getElementById('islamicDate').innerHTML = `<i class="far fa-calendar-alt"></i> <span>${formatted} Hijri</span>`;
+    }
+    updateIslamicDate();
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('mainNav');
+    const overlayDiv = document.getElementById('overlay');
+    function toggleMenu() {
+        nav.classList.toggle('active');
+        overlayDiv.classList.toggle('active');
+        document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+    }
+    menuToggle.addEventListener('click', toggleMenu);
+    overlayDiv.addEventListener('click', toggleMenu);
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            if(nav.classList.contains('active')) toggleMenu();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetEl = document.getElementById(targetId);
+            if(targetEl) targetEl.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+    // Stunning scroll header effect
+    window.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+        if(window.scrollY > 50) header.style.background = 'rgba(10, 62, 40, 0.95)';
+        else header.style.background = 'rgba(10, 62, 40, 0.85)';
+    });
+    // Additional master feature: live greeting based on time
+    const heroDiv = document.querySelector('.hero-content');
+    const greetingMsg = document.createElement('div');
+    greetingMsg.style.marginTop = '10px';
+    greetingMsg.style.fontSize = '0.9rem';
+    greetingMsg.style.color = '#f4e2a7';
+    const hour = new Date().getHours();
+    let greet = hour < 12 ? 'ሰላም ለዚህ ቅዱስ ጠዋት' : (hour < 18 ? 'እንደምን አለህ በረከት የሞላበት ቀን' : 'ምሽቱ የተባረከ ይሁን');
+    greetingMsg.innerHTML = `<i class="fas fa-hand-peace"></i> ${greet}`;
+    document.querySelector('.hero-content').appendChild(greetingMsg);
+
+    function sendToWhatsApp() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    
+    // Formatting the message for clarity
+    const message = `*አዲስ የአባልነት ምዝገባ (New Membership)*%0A--------------------------%0A*ስም:* ${name}%0A*ስልክ:* ${phone}%0A*አድራሻ:* ${address}`;
+    
+    // Primary Number: +27722819997 
+    const whatsappUrl = `https://wa.me{message}`;
+    
+    window.open(whatsappUrl, '_blank');
+}
+
+
+
+</script>
+</body>
+</html>
