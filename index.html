@@ -2,7 +2,7 @@
 <html lang="am">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,">
     <title>ቢላል መስጂድ - Bilal Mosque | Spiritual Hub</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Ethiopic:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -846,7 +846,22 @@
     border: 2px solid var(--gold);
     transition: var(--transition);
 }
+/* Default desktop styles */
+.container {
+  display: flex;
+  flex-direction: row;
+}
 
+/* Mobile styles (Screen width 768px or less) */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack elements vertically instead of side-by-side */
+  }
+  
+  .sidebar {
+    display: none; /* Hide non-essential items on mobile */
+  }
+}
     </style>
 </head>
 <body>
